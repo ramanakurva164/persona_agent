@@ -14,7 +14,7 @@ st.title("🤖 Persona-Adaptive Customer Support Agent")
 kb = load_kb()
 
 if "user_name" not in st.session_state:
-    st.session_state.user_name = st.text_input("👤 Enter your name", "Ramana")
+    st.session_state.user_name = st.text_input("👤 Enter your name", "")
 user = st.session_state.user_name
 
 
@@ -63,3 +63,4 @@ for chat in st.session_state.chat_history:
         st.markdown(f"**{chat['user']} ({chat['persona']})**: {chat['message']}")
     with st.chat_message("assistant"):
         st.markdown(chat["reply"])
+
