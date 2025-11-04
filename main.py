@@ -6,9 +6,9 @@ from escalator import check_escalation, escalate_to_human
 from utils import log_interaction
 from intent_detector import detect_intent
 
-st.set_page_config(page_title="Persona-Adaptive Support Agent", page_icon="🤖", layout="centered")
+st.set_page_config(page_title="Customer Support Agent", page_icon="🤖", layout="centered")
 
-st.title("🤖 Persona-Adaptive Customer Support Agent")
+st.title("🤖Customer Support Agent")
 
 
 kb = load_kb()
@@ -63,4 +63,5 @@ for chat in st.session_state.chat_history:
         st.markdown(f"**{chat['user']} ({chat['persona']})**: {chat['message']}")
     with st.chat_message("assistant"):
         st.markdown(chat["reply"])
+
 
